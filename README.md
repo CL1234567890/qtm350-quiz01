@@ -54,3 +54,4 @@ These bonus questions are designed to test advanced Git and GitHub skills. Attem
 
 Best of luck!
 Update for Bonus 3
+- Log Bonus 3 steps in commands.txt.

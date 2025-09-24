@@ -29,3 +29,45 @@ git log --oneline -n 5
 git rebase -i HEAD~2
 # changed second line to 'squash' and edited the combined commit message
 git push origin main --force-with-lease
+
+# Bonus 3: Pre-commit hook requiring README.md update
+# Hook script (saved at .git/hooks/pre-commit and made executable):
+
+#!/bin/bash
+if ! git diff --cached --name-only | grep -q "README.md"; then
+  echo "❌ Commit blocked: Please update README.md before committing."
+  exit 1
+fi
+
+# Setup steps:
+cd .git/hooks
+nano pre-commit
+chmod +x pre-commit
+
+# Test:
+# 1) git commit -m "test without readme"   # blocked
+# 2) echo "Update for Bonus 3" >> README.md
+#    git add README.md
+#    git commit -m "Update README (passes hook)"   # allowed
+#    git push origin main
+
+# Bonus 3: Pre-commit hook requiring README.md update
+# Hook script (saved at .git/hooks/pre-commit and made executable):
+
+#!/bin/bash
+if ! git diff --cached --name-only | grep -q "README.md"; then
+  echo "❌ Commit blocked: Please update README.md before committing."
+  exit 1
+fi
+
+# Setup steps:
+cd .git/hooks
+nano pre-commit
+chmod +x pre-commit
+
+# Test:
+# 1) git commit -m "test without readme"   # blocked
+# 2) echo "Update for Bonus 3" >> README.md
+#    git add README.md
+#    git commit -m "Update README (passes hook)"   # allowed
+#    git push origin main
