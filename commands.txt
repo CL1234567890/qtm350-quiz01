@@ -23,3 +23,9 @@ git push origin main
 Opened pull request from CL1234567890/qtm350-quiz01:main → danilofreire/qtm350-quiz01:main using GitHub UI
 
 
+
+# Bonus 2: squash last two commits into one
+git log --oneline -n 5
+git rebase -i HEAD~2
+# changed second line to 'squash' and edited the combined commit message
+git push origin main --force-with-lease
