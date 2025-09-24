@@ -1,5 +1,5 @@
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/CL1234567890/qtm350-quiz01.git
+cd qtm350-quiz01
 touch commands.txt
 git checkout -b feature-update
 mkdir reports
@@ -19,3 +19,7 @@ git merge feature-update
 git add commands.txt
 git commit -m "Add command history log"
 git push origin main
+
+Opened pull request from CL1234567890/qtm350-quiz01:main → danilofreire/qtm350-quiz01:main using GitHub UI
+
+
